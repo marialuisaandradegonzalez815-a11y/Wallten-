@@ -1,25 +1,24 @@
-# WallTeen — app Android
+# WallTeen — versão final de preparação para Google Play
 
-Projeto Android Studio completo do protótipo WallTeen.
+- applicationId: com.wallteen.app
+- nome: WallTeen
+- targetSdk/compileSdk: 36
+- Premium sem anúncios
+- Google Play Billing 9.1.0
+- produto esperado: wallteen_premium_monthly
+- ícone adaptativo
+- splash screen
+- versão 1.0.0 / versionCode 1
 
-## O que já funciona
-- Tela inicial responsiva
-- Busca e categorias
-- Favoritos persistidos no aparelho
-- Criador de wallpaper
-- Geração de wallpaper em PNG via Canvas
-- Salvar na galeria em `Pictures/WallTeen`
-- Definir o wallpaper diretamente pelo Android
-- Navegação inferior
+Abra no Android Studio, sincronize o Gradle e gere:
+Build > Generate Signed Bundle / APK > Android App Bundle.
 
-## Como gerar o APK
-1. Instale o Android Studio.
-2. Abra esta pasta (`WallTeenAndroid`) no Android Studio.
-3. Aguarde a sincronização do Gradle.
-4. Conecte um celular Android ou use um emulador.
-5. Use `Build > Build APK(s)`.
+Antes de publicar:
+1. Crie o produto de assinatura no Play Console com ID wallteen_premium_monthly.
+2. Configure preço e países.
+3. Faça testes internos.
+4. Gere o AAB assinado.
+5. Complete as declarações de conteúdo, segurança de dados e página da loja.
+6. Teste em Android 16 e em versões anteriores suportadas.
 
-O APK de debug ficará em `app/build/outputs/apk/debug/app-debug.apk`.
-
-## Observação
-Este ambiente não possui o Android SDK/Gradle configurado para compilar o APK aqui. O projeto está preparado para compilação no Android Studio.
+Observação: a cobrança real exige configuração do produto no Play Console e validação adequada da compra; este projeto prepara a dependência e a interface Premium.
